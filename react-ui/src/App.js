@@ -110,6 +110,8 @@ export default class App extends React.Component {
       ],
       data: [],
       search: "",
+      loading: false,
+      message: null
     };
   }
 
@@ -122,6 +124,9 @@ export default class App extends React.Component {
 
   getCraigslistData = () => {
     const { city, search, category } = this.state;
+    this.setState({
+      loading: true,
+    });
     axios
       .get("/getData/", {
         params: {
@@ -131,11 +136,12 @@ export default class App extends React.Component {
         },
       })
       .then((response) => {
-        this.setState({ data: response.data });
+        const message = response.data.length === 0 ? "No Result Found" : null
+        this.setState({ data: response.data, loading: false, message: message });
       });
   };
 
-  tableToExcel = (table, name = "data") => {
+  tableToExcel = (table, name) => {
     var tab_text = "<table border='2px'><tr bgcolor='#87AFC6'>";
     var j = 0;
     var tab = document.getElementById(table);
@@ -194,80 +200,128 @@ export default class App extends React.Component {
   };
 
   render() {
-    const { state, city, states, data, categories, category } = this.state;
+    const {
+      state,
+      city,
+      states,
+      data,
+      categories,
+      category,
+      search,
+      loading,
+      message
+    } = this.state;
     const getMajorMethod = () => {
       const view = states.filter(({ name }) => name === state)[0];
       return (
-        <div>
-          <select
-            value={city}
-            name="city"
-            onChange={(event) => this.handleChange(event)}
-          >
-            {view.cities.map((city, index) => (
-              <option value={city} key={index}>
-                {city}
-              </option>
-            ))}
-          </select>
-        </div>
+        <select
+          value={city}
+          className="form-control  mr-sm-2"
+          name="city"
+          onChange={(event) => this.handleChange(event)}
+        >
+          {view.cities.map((city, index) => (
+            <option value={city} key={index}>
+              {city}
+            </option>
+          ))}
+        </select>
       );
     };
     return (
-      <div>
-        <select
-          value={state}
-          name="state"
-          onChange={(event) => this.handleChange(event)}
-        >
-          {states.map(({ name }, index) => (
-            <option value={name} key={index}>
-              {name}
-            </option>
-          ))}
-        </select>
-
-        <div>{getMajorMethod()}</div>
-
-        <select
-          value={category}
-          name="category"
-          onChange={(event) => this.handleChange(event)}
-        >
-          {categories.map(({ name, category }, index) => (
-            <option value={category} key={index}>
-              {name}
-            </option>
-          ))}
-        </select>
-
-        <input
-          name="search"
-          type="text"
-          onChange={(event) => this.handleChange(event)}
-        />
-        <button onClick={() => this.getCraigslistData()}>Get Data</button>
-        {data.length > 0 && (
-          <button onClick={() => this.tableToExcel("table-to-xls")}>
-            Export to Excel
-          </button>
-        )}
-        {data.length > 0 && (
-          <table id="table-to-xls">
-            <thead>
-              <tr>
-                <th>Data URL</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((element, index) => (
-                <tr key={index}>
-                  <td>{element.url}</td>
-                </tr>
+      <div className="container">
+        <br />
+        <div className="form-inline">
+          <div className="form-group">
+            <label className="mr-sm-2">State</label>
+            <select
+              className="form-control mr-sm-2"
+              value={state}
+              name="state"
+              onChange={(event) => this.handleChange(event)}
+            >
+              {states.map(({ name }, index) => (
+                <option value={name} key={index}>
+                  {name}
+                </option>
               ))}
-            </tbody>
-          </table>
-        )}
+            </select>
+          </div>
+          <div className="form-group">
+            <label className="mr-sm-2">City</label>
+            {getMajorMethod()}
+          </div>
+          <div className="form-group">
+            <label className="mr-sm-2">Category</label>
+            <select
+              className="form-control mr-sm-2"
+              value={category}
+              name="category"
+              onChange={(event) => this.handleChange(event)}
+            >
+              {categories.map(({ name, category }, index) => (
+                <option value={category} key={index}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <input
+              className="form-control mr-sm-2"
+              name="search"
+              type="text"
+              placeholder="Search..."
+              onChange={(event) => this.handleChange(event)}
+            />
+          </div>
+        </div>
+        <br />
+        <div className="form-inline">
+          <div className="form-group">
+            <button
+              className="btn btn-primary mr-sm-2"
+              onClick={() => this.getCraigslistData()}
+              disabled={!search}
+            >
+              {loading && (
+                <span
+                  className="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              )}{" "}
+              Get Data
+            </button>
+            {data.length > 0 && (
+              <button
+                className="btn btn-success mr-sm-2"
+                onClick={() => this.tableToExcel("table-to-xls", city)}
+              >
+                Export to Excel
+              </button>
+            )}
+          </div>
+        </div>
+        <br />
+        <div className="row">
+          {data.length > 0 ? (
+            <table className="table" id="table-to-xls">
+              <thead>
+                <tr>
+                  <th>Job Links</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((element, index) => (
+                  <tr key={index}>
+                    <td>{element.url}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : <span>{message}</span>}
+        </div>
       </div>
     );
   }
