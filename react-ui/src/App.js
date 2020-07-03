@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 
 export default class App extends React.Component {
@@ -7,19 +7,110 @@ export default class App extends React.Component {
     this.state = {
       state: "Alabama",
       city: "auburn",
+      category: "hea",
       states: [
         {
           name: "Alabama",
-          cities: ["auburn", "birmingham", "dothan", "shoals", "gadsden-anniston", "huntsville / decatur", "mobile", "montgomery", "tuscaloosa"],
+          cities: [
+            "auburn",
+            "birmingham",
+            "dothan",
+            "shoals",
+            "gadsden",
+            "huntsville",
+            "mobile",
+            "montgomery",
+            "tuscaloosa",
+          ],
         },
         {
           name: "Alaska",
-          cities: ["anchorage / mat-su", "fairbanks", "kenai peninsula", "southeast alaska"],
+          cities: ["anchorage", "fairbanks", "kenai", "juneau"],
+        },
+        {
+          name: "Arizona",
+          cities: [
+            "flagstaff",
+            "mohave",
+            "phoenix",
+            "prescott",
+            "showlow",
+            "tucson",
+            "yuma",
+          ],
+        },
+        {
+          name: "California",
+          cities: [
+            "bakersfield",
+            "chico",
+            "fresno",
+            "goldcountry",
+            "hanford",
+            "humboldt",
+            "imperial",
+            "inlandempire",
+            "losangeles",
+            "mendocino",
+            "merced",
+            "modesto",
+            "monterey",
+            "orangecounty",
+            "palmsprings",
+            "redding",
+            "sacramento",
+            "sandiego",
+            "sfbay",
+            "slo",
+            "santabarbara",
+            "santamaria",
+            "siskiyou",
+            "stockton",
+            "susanville",
+            "ventura",
+            "visalia",
+            "yubasutter",
+          ],
+        },
+      ],
+      categories: [
+        {
+          name: "Medical + Health",
+          category: "hea",
+        },
+        {
+          name: "Business + Management",
+          category: "bus",
+        },
+        {
+          name: "Customer Service",
+          category: "csr",
+        },
+        {
+          name: "Legal + Paralegal",
+          category: "lgl",
+        },
+        {
+          name: "Salon + Spa + Fitness",
+          category: "spa",
+        },
+        {
+          name: "Technical Support",
+          category: "tch",
+        },
+        {
+          name: "Web + Info Design",
+          category: "web",
+        },
+
+        {
+          name: "Writing + Editing",
+          category: "wri",
         },
       ],
       data: [],
-      search: ""
-    }
+      search: "",
+    };
   }
 
   // common input change handler for imput and select
@@ -30,16 +121,19 @@ export default class App extends React.Component {
   };
 
   getCraigslistData = () => {
-    const { city, search } = this.state
-    axios.get("/getData/", {
-      params: {
-        city: city,
-        search: search
-      }
-    }).then(response => {
-      this.setState({ data: response.data })
-    });
-  }
+    const { city, search, category } = this.state;
+    axios
+      .get("/getData/", {
+        params: {
+          city: city,
+          search: search,
+          category: category,
+        },
+      })
+      .then((response) => {
+        this.setState({ data: response.data });
+      });
+  };
 
   tableToExcel = (table, name = "data") => {
     var tab_text = "<table border='2px'><tr bgcolor='#87AFC6'>";
@@ -94,13 +188,13 @@ export default class App extends React.Component {
         document.body.removeChild(a);
       } catch (e) { }
     this.setState({
-      data: []
+      data: [],
     });
     return false;
   };
 
   render() {
-    const { state, city, states, data } = this.state;
+    const { state, city, states, data, categories, category } = this.state;
     const getMajorMethod = () => {
       const view = states.filter(({ name }) => name === state)[0];
       return (
@@ -108,9 +202,12 @@ export default class App extends React.Component {
           <select
             value={city}
             name="city"
-            onChange={(event) => this.handleChange(event)}          >
+            onChange={(event) => this.handleChange(event)}
+          >
             {view.cities.map((city, index) => (
-              <option value={city} key={index} >{city}</option>
+              <option value={city} key={index}>
+                {city}
+              </option>
             ))}
           </select>
         </div>
@@ -124,35 +221,54 @@ export default class App extends React.Component {
           onChange={(event) => this.handleChange(event)}
         >
           {states.map(({ name }, index) => (
-            <option value={name} key={index}>{name}</option>
+            <option value={name} key={index}>
+              {name}
+            </option>
           ))}
         </select>
 
         <div>{getMajorMethod()}</div>
-        <input name="search" type="text" onChange={(event) => this.handleChange(event)} />
+
+        <select
+          value={category}
+          name="category"
+          onChange={(event) => this.handleChange(event)}
+        >
+          {categories.map(({ name, category }, index) => (
+            <option value={category} key={index}>
+              {name}
+            </option>
+          ))}
+        </select>
+
+        <input
+          name="search"
+          type="text"
+          onChange={(event) => this.handleChange(event)}
+        />
         <button onClick={() => this.getCraigslistData()}>Get Data</button>
         {data.length > 0 && (
           <button onClick={() => this.tableToExcel("table-to-xls")}>
             Export to Excel
           </button>
         )}
-        {data.length > 0 && <table id="table-to-xls">
-          <thead>
-            <tr>
-              <th>Data URL</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((element, index) => (
-              <tr key={index}>
-                <td>{element.url}</td>
+        {data.length > 0 && (
+          <table id="table-to-xls">
+            <thead>
+              <tr>
+                <th>Data URL</th>
               </tr>
-            ))}
-          </tbody>
-        </table>}
-
-      </div >
+            </thead>
+            <tbody>
+              {data.map((element, index) => (
+                <tr key={index}>
+                  <td>{element.url}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
     );
   }
 }
-

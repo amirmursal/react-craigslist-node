@@ -30,6 +30,7 @@ if (!isDev && cluster.isMaster) {
   app.get('/getData', function (req, res) {
     var client = new craigslist.Client({
       city: req.query.city,
+      category: req.query.category
     });
 
     client
