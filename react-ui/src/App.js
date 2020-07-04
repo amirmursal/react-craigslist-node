@@ -272,6 +272,7 @@ export default class App extends React.Component {
               name="search"
               type="text"
               placeholder="Search..."
+              autocomplete="off"
               onChange={(event) => this.handleChange(event)}
             />
           </div>
