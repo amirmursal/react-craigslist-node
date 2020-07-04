@@ -29,12 +29,16 @@ if (!isDev && cluster.isMaster) {
   // Answer API requests.
   app.get('/getData', function (req, res) {
     var client = new craigslist.Client({
-      city: req.query.city,
-      category: req.query.category
-    });
+      city: req.query.city
+    }), options = {
+      category: req.query.category,
+      searchTitlesOnly: false,
+      nocache: false
+    };
+
 
     client
-      .search(req.query.search)
+      .search(options, req.query.search)
       .then((listings) => {
         // play with listings here...
         //listings.forEach((listing) => console.log(listing));

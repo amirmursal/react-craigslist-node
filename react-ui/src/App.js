@@ -309,13 +309,15 @@ export default class App extends React.Component {
             <table className="table" id="table-to-xls">
               <thead>
                 <tr>
+                  <th>Index</th>
                   <th>Job Links</th>
                 </tr>
               </thead>
               <tbody>
                 {data.map((element, index) => (
                   <tr key={index}>
-                    <td>{element.url}</td>
+                    <td>{index + 1}</td>
+                    <td><a href={element.url} target="_blank">{element.url}</a></td>
                   </tr>
                 ))}
               </tbody>
