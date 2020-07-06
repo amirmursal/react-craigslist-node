@@ -33,7 +33,8 @@ if (!isDev && cluster.isMaster) {
     }), options = {
       category: req.query.category,
       searchTitlesOnly: false,
-      nocache: false
+      nocache: false,
+      searchNearby: true
     };
 
 
