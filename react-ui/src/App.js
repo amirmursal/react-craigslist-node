@@ -40,6 +40,16 @@ export default class App extends React.Component {
           ],
         },
         {
+          name: "Arkansas",
+          cities: [
+            "fayar",
+            "fortsmith",
+            "jonesboro",
+            "littlerock",
+            "texarkana",
+          ],
+        },
+        {
           name: "California",
           cities: [
             "bakersfield",
@@ -70,6 +80,19 @@ export default class App extends React.Component {
             "ventura",
             "visalia",
             "yubasutter",
+          ],
+        },
+        {
+          name: "Colorado",
+          cities: [
+            "boulder",
+            "cosprings",
+            "denver",
+            "eastco",
+            "fortcollins",
+            "rockies",
+            "pueblo",
+            "westslope"
           ],
         },
       ],
@@ -111,7 +134,7 @@ export default class App extends React.Component {
       data: [],
       search: "",
       loading: false,
-      message: null
+      message: null,
     };
   }
 
@@ -136,8 +159,12 @@ export default class App extends React.Component {
         },
       })
       .then((response) => {
-        const message = response.data.length === 0 ? "No Result Found" : null
-        this.setState({ data: response.data, loading: false, message: message });
+        const message = response.data.length === 0 ? "No Result Found" : null;
+        this.setState({
+          data: response.data,
+          loading: false,
+          message: message,
+        });
       });
   };
 
@@ -209,7 +236,7 @@ export default class App extends React.Component {
       category,
       search,
       loading,
-      message
+      message,
     } = this.state;
     const getMajorMethod = () => {
       const view = states.filter(({ name }) => name === state)[0];
@@ -272,7 +299,7 @@ export default class App extends React.Component {
               name="search"
               type="text"
               placeholder="Search..."
-              autocomplete="off"
+              autoComplete="off"
               onChange={(event) => this.handleChange(event)}
             />
           </div>
@@ -318,12 +345,18 @@ export default class App extends React.Component {
                 {data.map((element, index) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
-                    <td><a href={element.url} target="_blank">{element.url}</a></td>
+                    <td>
+                      <a href={element.url} target="_blank">
+                        {element.url}
+                      </a>
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-          ) : <span>{message}</span>}
+          ) : (
+              <span>{message}</span>
+            )}
         </div>
       </div>
     );
