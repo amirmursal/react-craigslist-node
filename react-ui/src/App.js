@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -12,87 +11,411 @@ export default class App extends React.Component {
         {
           name: "Alabama",
           cities: [
-            "auburn",
-            "birmingham",
-            "dothan",
-            "shoals",
-            "gadsden",
-            "huntsville",
-            "mobile",
-            "montgomery",
-            "tuscaloosa",
+            {
+              name: "auburn",
+              city: "auburn"
+            },
+            {
+              name: "birmingham",
+              city: "birmingham"
+            },
+            {
+              name: "dothan",
+              city: "dothan"
+            },
+            {
+              name: "florence / muscle shoals",
+              city: "shoals"
+            },
+            {
+              name: "gadsden-anniston",
+              city: "gadsden"
+            },
+            {
+              name: "huntsville / decatur",
+              city: "huntsville"
+            },
+            {
+              name: "mobile",
+              city: "mobile"
+            },
+            {
+              name: "montgomery",
+              city: "montgomery"
+            },
+            {
+              name: "tuscaloosa",
+              city: "tuscaloosa"
+            },
           ],
         },
         {
           name: "Alaska",
-          cities: ["anchorage", "fairbanks", "kenai", "juneau"],
+          cities: [{
+            name: "anchorage / mat-su",
+            city: "anchorage"
+          }, {
+            name: "fairbanks",
+            city: "fairbanks"
+          }, {
+            name: "kenai peninsula",
+            city: "kenai"
+          }, {
+            name: "southeast alaska",
+            city: "juneau"
+          }],
         },
         {
           name: "Arizona",
           cities: [
-            "flagstaff",
-            "mohave",
-            "phoenix",
-            "prescott",
-            "showlow",
-            "tucson",
-            "yuma",
+            {
+              name: "flagstaff / sedona",
+              city: "flagstaff"
+            },
+            {
+              name: "mohave county",
+              city: "mohave"
+            },
+            {
+              name: "phoenix",
+              city: "phoenix"
+            },
+            {
+              name: "prescott",
+              city: "prescott"
+            },
+            {
+              name: "show low",
+              city: "showlow"
+            },
+            {
+              name: "sierra vista",
+              city: "sierravista"
+            },
+            {
+              name: "tucson",
+              city: "tucson"
+            },
+            {
+              name: "yuma",
+              city: "yuma"
+            }
           ],
         },
         {
           name: "Arkansas",
           cities: [
-            "fayar",
-            "fortsmith",
-            "jonesboro",
-            "littlerock",
-            "texarkana",
+            {
+              name: "fayetteville",
+              city: "fayar"
+            },
+            {
+              name: "fort smith",
+              city: "fortsmith"
+            },
+            {
+              name: "jonesboro",
+              city: "jonesboro"
+            },
+            {
+              name: "little rock",
+              city: "littlerock"
+            },
+            {
+              name: "texarkana",
+              city: "texarkana"
+            },
+
           ],
         },
         {
           name: "California",
           cities: [
-            "bakersfield",
-            "chico",
-            "fresno",
-            "goldcountry",
-            "hanford",
-            "humboldt",
-            "imperial",
-            "inlandempire",
-            "losangeles",
-            "mendocino",
-            "merced",
-            "modesto",
-            "monterey",
-            "orangecounty",
-            "palmsprings",
-            "redding",
-            "sacramento",
-            "sandiego",
-            "sfbay",
-            "slo",
-            "santabarbara",
-            "santamaria",
-            "siskiyou",
-            "stockton",
-            "susanville",
-            "ventura",
-            "visalia",
-            "yubasutter",
+            {
+              name: "bakersfield",
+              city: "bakersfield"
+            },
+            {
+              name: "chico",
+              city: "chico"
+            },
+            {
+              name: "fresno / madera",
+              city: "fresno"
+            },
+            {
+              name: "gold country",
+              city: "goldcountry"
+            },
+            {
+              name: "hanford-corcoran",
+              city: "hanford"
+            },
+            {
+              name: "humboldt county",
+              city: "humboldt"
+            },
+            {
+              name: "imperial county",
+              city: "imperial"
+            },
+            {
+              name: "inland empire",
+              city: "inlandempire"
+            },
+            {
+              name: "los angeles",
+              city: "losangeles"
+            },
+            {
+              name: "mendocino county",
+              city: "mendocino"
+            },
+            {
+              name: "merced",
+              city: "merced"
+            },
+            {
+              name: "modesto",
+              city: "modesto"
+            },
+            {
+              name: "monterey bay",
+              city: "monterey"
+            },
+            {
+              name: "orange county",
+              city: "orangecounty"
+            },
+            {
+              name: "palm springs",
+              city: "palmsprings"
+            },
+            {
+              name: "redding",
+              city: "redding"
+            },
+            {
+              name: "sacramento",
+              city: "sacramento"
+            },
+            {
+              name: "san diego",
+              city: "sandiego"
+            },
+            {
+              name: "san francisco bay area",
+              city: "sfbay"
+            },
+            {
+              name: "san luis obispo",
+              city: "slo"
+            },
+            {
+              name: "santa barbara",
+              city: "santabarbara"
+            },
+            {
+              name: "santa maria",
+              city: "santamaria"
+            },
+            {
+              name: "siskiyou county",
+              city: "siskiyou"
+            },
+            {
+              name: "stockton",
+              city: "stockton"
+            },
+            {
+              name: "susanville",
+              city: "susanville"
+            },
+            {
+              name: "ventura county",
+              city: "ventura"
+            },
+            {
+              name: "visalia-tulare",
+              city: "visalia"
+            },
+            {
+              name: "yuba-sutter",
+              city: "yubasutter"
+            }
           ],
         },
         {
           name: "Colorado",
           cities: [
-            "boulder",
-            "cosprings",
-            "denver",
-            "eastco",
-            "fortcollins",
-            "rockies",
-            "pueblo",
-            "westslope"
+            {
+              name: "boulder",
+              city: "boulder"
+            },
+            {
+              name: "colorado springs",
+              city: "cosprings"
+            },
+            {
+              name: "denver",
+              city: "denver"
+            },
+            {
+              name: "eastern CO",
+              city: "eastco"
+            },
+            {
+              name: "fort collins / north CO",
+              city: "fortcollins"
+            },
+            {
+              name: "high rockies",
+              city: "rockies"
+            },
+            {
+              name: "pueblo",
+              city: "pueblo"
+            },
+            {
+              name: "western slope",
+              city: "westslope"
+            }
+          ],
+        },
+        {
+          name: "Connecticut",
+          cities: [
+            {
+              name: "eastern CT",
+              city: "newlondon"
+            },
+            {
+              name: "hartford",
+              city: "hartford"
+            },
+            {
+              name: "new haven",
+              city: "newhaven"
+            },
+            {
+              name: "northwest CT",
+              city: "nwct"
+            }
+          ],
+        },
+        {
+          name: "Delaware",
+          cities: [
+            {
+              name: "delaware",
+              city: "delaware"
+            }
+          ],
+        },
+        {
+          name: "District of Columbia",
+          cities: [
+            {
+              name: "washington",
+              city: "washington"
+            }
+          ],
+        },
+        {
+          name: "Florida",
+          cities: [
+            {
+              name: "broward county",
+              city: "miami"
+            },
+            {
+              name: "daytona beach",
+              city: "daytona"
+            },
+            {
+              name: "florida keys",
+              city: "keys"
+            },
+            {
+              name: "fort lauderdale",
+              city: "miami"
+            },
+            {
+              name: "ft myers / SW florida",
+              city: "fortmyers"
+            },
+            {
+              name: "gainesville",
+              city: "gainesville"
+            },
+            {
+              name: "heartland florida",
+              city: "cfl"
+            },
+            {
+              name: "jacksonville",
+              city: "jacksonville"
+            },
+            {
+              name: "lakeland",
+              city: "lakeland"
+            },
+            {
+              name: "miami / dade",
+              city: "miami"
+            },
+            {
+              name: "north central FL",
+              city: "lakecity"
+            },
+            {
+              name: "ocala",
+              city: "ocala"
+            },
+            {
+              name: "okaloosa / walton",
+              city: "okaloosa"
+            },
+            {
+              name: "orlando",
+              city: "orlando"
+            },
+            {
+              name: "panama city",
+              city: "panamacity"
+            },
+            {
+              name: "pensacola",
+              city: "pensacola"
+            },
+            {
+              name: "sarasota-bradenton",
+              city: "sarasota"
+            },
+            {
+              name: "space coast",
+              city: "spacecoast"
+            },
+            {
+              name: "st augustine",
+              city: "staugustine"
+            },
+            {
+              name: "tallahassee",
+              city: "tallahassee"
+            },
+            {
+              name: "tampa bay area",
+              city: "tampa"
+            },
+            {
+              name: "treasure coast",
+              city: "treasure"
+            },
+            {
+              name: "palm beach county",
+              city: "miami"
+            }
           ],
         },
       ],
@@ -248,8 +571,8 @@ export default class App extends React.Component {
           onChange={(event) => this.handleChange(event)}
         >
           {view.cities.map((city, index) => (
-            <option value={city} key={index}>
-              {city}
+            <option value={city.city} key={index}>
+              {city.name}
             </option>
           ))}
         </select>
