@@ -466,6 +466,85 @@ export default class App extends React.Component {
               city: "valdosta"
             },
           ]
+        },
+        {
+          name: "Hawaii",
+          cities: [
+            {
+              name: "hawaii",
+              city: "honolulu"
+            },
+          ]
+        },
+        {
+          name: "Idaho",
+          cities: [
+            {
+              name: "boise",
+              city: "boise"
+            },
+            {
+              name: "east idaho",
+              city: "eastidaho"
+            },
+            {
+              name: "lewiston / clarkston",
+              city: "lewiston"
+            },
+            {
+              name: "twin falls",
+              city: "twinfalls"
+            },
+          ]
+        },
+        {
+          name: "Illinois",
+          cities: [
+            {
+              name: "bloomington-normal",
+              city: "bn"
+            },
+            {
+              name: "champaign urbana",
+              city: "chambana"
+            },
+            {
+              name: "chicago",
+              city: "chicago"
+            },
+            {
+              name: "decatur",
+              city: "decatur"
+            },
+            {
+              name: "la salle co",
+              city: "lasalle"
+            },
+            {
+              name: "mattoon-charleston",
+              city: "mattoon"
+            },
+            {
+              name: "peoria",
+              city: "peoria"
+            },
+            {
+              name: "rockford",
+              city: "rockford"
+            },
+            {
+              name: "southern illinois",
+              city: "carbondale"
+            },
+            {
+              name: "springfield",
+              city: "springfieldil"
+            },
+            {
+              name: "western IL",
+              city: "quincy"
+            },
+          ]
         }
       ],
       categories: [
