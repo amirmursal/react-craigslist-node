@@ -418,6 +418,55 @@ export default class App extends React.Component {
             }
           ],
         },
+        {
+          name: "Georgia",
+          cities: [
+            {
+              name: "albany",
+              city: "albanyga"
+            },
+            {
+              name: "athens",
+              city: "athensga"
+            },
+            {
+              name: "atlanta",
+              city: "atlanta"
+            },
+            {
+              name: "augusta",
+              city: "augusta"
+            },
+            {
+              name: "brunswick",
+              city: "brunswick"
+            },
+            {
+              name: "columbus",
+              city: "columbusga"
+            },
+            {
+              name: "macon / warner robins",
+              city: "macon"
+            },
+            {
+              name: "northwest GA",
+              city: "nwga"
+            },
+            {
+              name: "savannah / hinesville",
+              city: "savannah"
+            },
+            {
+              name: "statesboro",
+              city: "statesboro"
+            },
+            {
+              name: "valdosta",
+              city: "valdosta"
+            },
+          ]
+        }
       ],
       categories: [
         {
@@ -461,11 +510,38 @@ export default class App extends React.Component {
     };
   }
 
-  // common input change handler for imput and select
+  // common input change handler for input and select
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
+  };
+
+  handleStateChange = (event) => {
+    const autoSelectedCity = this.state.states.find(state => state.name === event.target.value);
+    this.setState({
+      state: event.target.value,
+      city: autoSelectedCity.cities[0].city
+    });
+
+  };
+
+  getCitiesAsPerStateSelected = () => {
+    const view = this.state.states.filter(({ name }) => name === this.state.state)[0];
+    return (
+      <select
+        value={this.state.city}
+        className="form-control  mr-sm-2"
+        name="city"
+        onChange={(event) => this.handleChange(event)}
+      >
+        {view.cities.map((city, index) => (
+          <option value={city.city} key={index}>
+            {city.name}
+          </option>
+        ))}
+      </select>
+    );
   };
 
   getCraigslistData = () => {
@@ -561,23 +637,7 @@ export default class App extends React.Component {
       loading,
       message,
     } = this.state;
-    const getMajorMethod = () => {
-      const view = states.filter(({ name }) => name === state)[0];
-      return (
-        <select
-          value={city}
-          className="form-control  mr-sm-2"
-          name="city"
-          onChange={(event) => this.handleChange(event)}
-        >
-          {view.cities.map((city, index) => (
-            <option value={city.city} key={index}>
-              {city.name}
-            </option>
-          ))}
-        </select>
-      );
-    };
+
     return (
       <div className="container">
         <br />
@@ -588,7 +648,7 @@ export default class App extends React.Component {
               className="form-control mr-sm-2"
               value={state}
               name="state"
-              onChange={(event) => this.handleChange(event)}
+              onChange={(event) => this.handleStateChange(event)}
             >
               {states.map(({ name }, index) => (
                 <option value={name} key={index}>
@@ -599,7 +659,7 @@ export default class App extends React.Component {
           </div>
           <div className="form-group">
             <label className="mr-sm-2">City</label>
-            {getMajorMethod()}
+            {this.getCitiesAsPerStateSelected()}
           </div>
           <div className="form-group">
             <label className="mr-sm-2">Category</label>
