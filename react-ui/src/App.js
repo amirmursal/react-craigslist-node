@@ -1282,6 +1282,655 @@ export default class App extends React.Component {
               city: "nd"
             },
           ]
+        },
+        {
+          name: "Ohio",
+          cities: [
+            {
+              name: "akron / canton",
+              city: "akroncanton"
+            },
+            {
+              name: "ashtabula",
+              city: "ashtabula"
+            },
+            {
+              name: "athens",
+              city: "athens"
+            },
+            {
+              name: "chillicothe",
+              city: "chillicothe"
+            },
+            {
+              name: "cincinnati",
+              city: "cincinnati"
+            },
+            {
+              name: "cleveland",
+              city: "cleveland"
+            },
+            {
+              name: "columbus",
+              city: "columbus"
+            },
+            {
+              name: "dayton / springfield",
+              city: "dayton"
+            },
+            {
+              name: "lima / findlay",
+              city: "limaohio"
+            },
+            {
+              name: "mansfield",
+              city: "mansfield"
+            },
+            {
+              name: "sandusky",
+              city: "sandusky"
+            },
+            {
+              name: "toledo",
+              city: "toledo"
+            },
+            {
+              name: "tuscarawas co",
+              city: "tuscarawas"
+            },
+            {
+              name: "youngstown",
+              city: "youngstown"
+            },
+            {
+              name: "zanesville / cambridge",
+              city: "zanesville"
+            }
+          ]
+        },
+        {
+          name: "Oklahoma",
+          cities: [
+            {
+              name: "lawton",
+              city: "lawton"
+            },
+            {
+              name: "northwest OK",
+              city: "enid"
+            },
+            {
+              name: "oklahoma city",
+              city: "oklahomacity"
+            },
+            {
+              name: "stillwater",
+              city: "stillwater"
+            },
+            {
+              name: "tulsa",
+              city: "tulsa"
+            },
+          ]
+        },
+        {
+          name: "Oregon",
+          cities: [
+            {
+              name: "bend",
+              city: "bend"
+            },
+            {
+              name: "corvallis/albany",
+              city: "corvallis"
+            },
+            {
+              name: "east oregon",
+              city: "eastoregon"
+            },
+            {
+              name: "eugene",
+              city: "eugene"
+            },
+            {
+              name: "klamath falls",
+              city: "klamath"
+            },
+            {
+              name: "medford-ashland",
+              city: "medford"
+            },
+            {
+              name: "oregon coast",
+              city: "oregoncoast"
+            },
+            {
+              name: "portland",
+              city: "portland"
+            },
+            {
+              name: "roseburg",
+              city: "roseburg"
+            },
+            {
+              name: "salem",
+              city: "salem"
+            },
+          ]
+        },
+        {
+          name: "Pennsylvania",
+          cities: [
+            {
+              name: "altoona-johnstown",
+              city: "altoona"
+            },
+            {
+              name: "cumberland valley",
+              city: "chambersburg"
+            },
+            {
+              name: "erie",
+              city: "erie"
+            },
+            {
+              name: "harrisburg",
+              city: "harrisburg"
+            },
+            {
+              name: "lancaster",
+              city: "lancaster"
+            },
+            {
+              name: "lehigh valley",
+              city: "allentown"
+            },
+            {
+              name: "meadville",
+              city: "meadville"
+            },
+            {
+              name: "philadelphia",
+              city: "philadelphia"
+            },
+            {
+              name: "pittsburgh",
+              city: "pittsburgh"
+            },
+            {
+              name: "poconos",
+              city: "poconos"
+            },
+            {
+              name: "reading",
+              city: "reading"
+            },
+            {
+              name: "scranton / wilkes-barre",
+              city: "scranton"
+            },
+            {
+              name: "state college",
+              city: "pennstate"
+            },
+            {
+              name: "williamsport",
+              city: "williamsport"
+            },
+            {
+              name: "york",
+              city: "york"
+            },
+          ]
+        },
+        {
+          name: "Rhode Island",
+          cities: [
+            {
+              name: "rhode island",
+              city: "providence"
+            },
+          ]
+        },
+        {
+          name: "South Carolina",
+          cities: [
+            {
+              name: "charleston",
+              city: "charleston"
+            },
+            {
+              name: "columbia",
+              city: "columbia"
+            },
+            {
+              name: "florence",
+              city: "florencesc"
+            },
+            {
+              name: "greenville / upstate",
+              city: "greenville"
+            },
+            {
+              name: "hilton head",
+              city: "hiltonhead"
+            },
+            {
+              name: "myrtle beach",
+              city: "myrtlebeach"
+            },
+          ]
+        },
+        {
+          name: "South Dakota",
+          cities: [
+            {
+              name: "northeast SD",
+              city: "nesd"
+            },
+            {
+              name: "pierre / central SD",
+              city: "csd"
+            },
+            {
+              name: "rapid city / west SD",
+              city: "rapidcity"
+            },
+            {
+              name: "sioux falls / SE SD",
+              city: "siouxfalls"
+            },
+            {
+              name: "south dakota",
+              city: "sd"
+            },
+          ]
+        },
+        {
+          name: "Tennessee",
+          cities: [
+            {
+              name: "chattanooga",
+              city: "chattanooga"
+            },
+            {
+              name: "clarksville",
+              city: "clarksville"
+            },
+            {
+              name: "jackson",
+              city: "jacksontn"
+            },
+            {
+              name: "knoxville",
+              city: "knoxville"
+            },
+            {
+              name: "memphis",
+              city: "memphis"
+            },
+            {
+              name: "nashville",
+              city: "nashville"
+            },
+            {
+              name: "tri-cities",
+              city: "tricities"
+            },
+          ]
+        },
+        {
+          name: "Texas",
+          cities: [
+            {
+              name: "abilene",
+              city: "abilene"
+            },
+            {
+              name: "amarillo",
+              city: "amarillo"
+            },
+            {
+              name: "austin",
+              city: "austin"
+            },
+            {
+              name: "beaumont / port arthur",
+              city: "beaumont"
+            },
+            {
+              name: "brownsville",
+              city: "brownsville"
+            },
+            {
+              name: "college station",
+              city: "collegestation"
+            },
+            {
+              name: "corpus christi",
+              city: "corpuschristi"
+            },
+            {
+              name: "dallas / fort worth",
+              city: "dallas"
+            },
+            {
+              name: "deep east texas",
+              city: "nacogdoches"
+            },
+            {
+              name: "del rio / eagle pass",
+              city: "delrio"
+            },
+            {
+              name: "el paso",
+              city: "elpaso"
+            },
+            {
+              name: "galveston",
+              city: "galveston"
+            },
+            {
+              name: "houston",
+              city: "houston"
+            },
+            {
+              name: "killeen / temple / ft hood",
+              city: "killeen"
+            },
+            {
+              name: "laredo",
+              city: "laredo"
+            },
+            {
+              name: "lubbock",
+              city: "lubbock"
+            },
+            {
+              name: "mcallen / edinburg",
+              city: "mcallen"
+            },
+            {
+              name: "odessa / midland",
+              city: "odessa"
+            },
+            {
+              name: "san angelo",
+              city: "sanangelo"
+            },
+            {
+              name: "san antonio",
+              city: "san antonio"
+            },
+            {
+              name: "san marcos",
+              city: "sanmarcos"
+            },
+            {
+              name: "southwest TX",
+              city: "bigbend"
+            },
+            {
+              name: "texoma",
+              city: "texoma"
+            },
+            {
+              name: "tyler / east TX",
+              city: "easttexas"
+            },
+            {
+              name: "victoria",
+              city: "victoriatx"
+            },
+            {
+              name: "waco",
+              city: "waco"
+            },
+            {
+              name: "wichita falls",
+              city: "wichitafalls"
+            }
+          ]
+        },
+        {
+          name: "Utah",
+          cities: [
+            {
+              name: "logan",
+              city: "logan"
+            },
+            {
+              name: "ogden-clearfield",
+              city: "ogden"
+            },
+            {
+              name: "provo / orem",
+              city: "provo"
+            },
+            {
+              name: "salt lake city",
+              city: "saltlakecity"
+            },
+            {
+              name: "st george",
+              city: "stgeorge"
+            },
+          ]
+        },
+        {
+          name: "Vermont",
+          cities: [
+            {
+              name: "vermont",
+              city: "burlington"
+            },
+          ]
+        },
+        {
+          name: "Virginia",
+          cities: [
+            {
+              name: "charlottesville",
+              city: "charlottesville"
+            },
+            {
+              name: "danville",
+              city: "danville"
+            },
+            {
+              name: "fredericksburg",
+              city: "fredericksburg"
+            },
+            {
+              name: "hampton roads",
+              city: "norfolk"
+            },
+            {
+              name: "harrisonburg",
+              city: "harrisonburg"
+            },
+            {
+              name: "lynchburg",
+              city: "lynchburg"
+            },
+            {
+              name: "new river valley",
+              city: "blacksburg"
+            },
+            {
+              name: "richmond",
+              city: "richmond"
+            },
+            {
+              name: "roanoke",
+              city: "roanoke"
+            },
+            {
+              name: "southwest VA",
+              city: "swva"
+            },
+            {
+              name: "winchester",
+              city: "winchester"
+            }
+          ]
+        },
+        {
+          name: "Washington",
+          cities: [
+            {
+              name: "bellingham",
+              city: "bellingham"
+            },
+            {
+              name: "kennewick-pasco-richland",
+              city: "kpr"
+            },
+            {
+              name: "moses lake",
+              city: "moseslake"
+            },
+            {
+              name: "olympic peninsula",
+              city: "olympic"
+            },
+            {
+              name: "pullman / moscow",
+              city: "pullman"
+            },
+            {
+              name: "seattle-tacoma",
+              city: "seattle"
+            },
+            {
+              name: "skagit / island / SJI",
+              city: "skagit"
+            },
+            {
+              name: "spokane / coeur d'alene",
+              city: "spokane"
+            },
+            {
+              name: "wenatchee",
+              city: "wenatchee"
+            },
+            {
+              name: "yakima",
+              city: "yakima"
+            },
+          ]
+        },
+        {
+          name: "West Virginia",
+          cities: [
+            {
+              name: "charleston",
+              city: "charlestonwv"
+            },
+            {
+              name: "eastern panhandle",
+              city: "martinsburg"
+            },
+            {
+              name: "huntington-ashland",
+              city: "huntington"
+            },
+            {
+              name: "morgantown",
+              city: "morgantown"
+            },
+            {
+              name: "northern panhandle",
+              city: "wheeling"
+            },
+            {
+              name: "parkersburg-marietta",
+              city: "parkersburg"
+            },
+            {
+              name: "southern WV",
+              city: "swv"
+            },
+            {
+              name: "west virginia (old)",
+              city: "wv"
+            },
+          ]
+        },
+        {
+          name: "Wisconsin",
+          cities: [
+            {
+              name: "appleton-oshkosh-FDL",
+              city: "appleton"
+            },
+            {
+              name: "eau claire",
+              city: "eauclaire"
+            },
+            {
+              name: "green bay",
+              city: "greenbay"
+            },
+            {
+              name: "janesville",
+              city: "janesville"
+            },
+            {
+              name: "kenosha-racine",
+              city: "racine"
+            },
+            {
+              name: "la crosse",
+              city: "lacrosse"
+            },
+            {
+              name: "madison",
+              city: "madison"
+            },
+            {
+              name: "milwaukee",
+              city: "milwaukee"
+            },
+            {
+              name: "northern WI",
+              city: "northernwi"
+            },
+            {
+              name: "sheboygan",
+              city: "sheboygan"
+            },
+            {
+              name: "wausau",
+              city: "wausau"
+            },
+          ]
+        },
+        {
+          name: "Wyoming",
+          cities: [
+            {
+              name: "wyoming",
+              city: "wyoming"
+            },
+          ]
+        },
+        {
+          name: "Territories",
+          cities: [
+            {
+              name: "guam-micronesia",
+              city: "micronesia"
+            },
+            {
+              name: "puerto rico",
+              city: "puertorico"
+            },
+            {
+              name: "U.S. virgin islands",
+              city: "virgin"
+            }
+          ]
         }
       ],
       categories: [
