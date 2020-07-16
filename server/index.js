@@ -1,10 +1,10 @@
-const express = require('express');
-const path = require('path');
-const cluster = require('cluster');
-const numCPUs = require('os').cpus().length;
-const craigslist = require('node-craigslist');
+const express = require("express");
+const path = require("path");
+const cluster = require("cluster");
+const numCPUs = require("os").cpus().length;
+const craigslist = require("node-craigslist");
 
-const isDev = process.env.NODE_ENV !== 'production';
+const isDev = process.env.NODE_ENV !== "production";
 const PORT = process.env.PORT || 5000;
 
 // Multi-process to utilize all CPU cores.
@@ -16,33 +16,32 @@ if (!isDev && cluster.isMaster) {
     cluster.fork();
   }
 
-  cluster.on('exit', (worker, code, signal) => {
-    console.error(`Node cluster worker ${worker.process.pid} exited: code ${code}, signal ${signal}`);
+  cluster.on("exit", (worker, code, signal) => {
+    console.error(
+      `Node cluster worker ${worker.process.pid} exited: code ${code}, signal ${signal}`
+    );
   });
-
 } else {
   const app = express();
 
   // Priority serve any static files.
-  app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+  app.use(express.static(path.resolve(__dirname, "../react-ui/build")));
 
   // Answer API requests.
-  app.get('/getData', function (req, res) {
+  app.get("/getData", function (req, res) {
     var client = new craigslist.Client({
-      city: req.query.city
-    }), options = {
-      category: req.query.category,
-      searchTitlesOnly: false,
-      nocache: false,
-      searchNearby: true
-    };
-
+        city: req.query.city,
+      }),
+      options = {
+        category: req.query.category,
+        searchTitlesOnly: false,
+        nocache: false,
+        searchNearby: !(req.query.searchNearby === "true"),
+      };
 
     client
       .search(options, req.query.search)
       .then((listings) => {
-        // play with listings here...
-        //listings.forEach((listing) => console.log(listing));
         res.json(listings);
       })
       .catch((err) => {
@@ -51,11 +50,17 @@ if (!isDev && cluster.isMaster) {
   });
 
   // All remaining requests return the React app, so it can handle routing.
-  app.get('*', function (request, response) {
-    response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
+  app.get("*", function (request, response) {
+    response.sendFile(
+      path.resolve(__dirname, "../react-ui/build", "index.html")
+    );
   });
 
   app.listen(PORT, function () {
-    console.error(`Node ${isDev ? 'dev server' : 'cluster worker ' + process.pid}: listening on port ${PORT}`);
+    console.error(
+      `Node ${
+        isDev ? "dev server" : "cluster worker " + process.pid
+      }: listening on port ${PORT}`
+    );
   });
 }

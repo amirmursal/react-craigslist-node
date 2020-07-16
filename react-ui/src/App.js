@@ -1,5 +1,8 @@
 import React from "react";
 import axios from "axios";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -13,93 +16,98 @@ export default class App extends React.Component {
           cities: [
             {
               name: "auburn",
-              city: "auburn"
+              city: "auburn",
             },
             {
               name: "birmingham",
-              city: "birmingham"
+              city: "birmingham",
             },
             {
               name: "dothan",
-              city: "dothan"
+              city: "dothan",
             },
             {
               name: "florence / muscle shoals",
-              city: "shoals"
+              city: "shoals",
             },
             {
               name: "gadsden-anniston",
-              city: "gadsden"
+              city: "gadsden",
             },
             {
               name: "huntsville / decatur",
-              city: "huntsville"
+              city: "huntsville",
             },
             {
               name: "mobile",
-              city: "mobile"
+              city: "mobile",
             },
             {
               name: "montgomery",
-              city: "montgomery"
+              city: "montgomery",
             },
             {
               name: "tuscaloosa",
-              city: "tuscaloosa"
+              city: "tuscaloosa",
             },
           ],
         },
         {
           name: "Alaska",
-          cities: [{
-            name: "anchorage / mat-su",
-            city: "anchorage"
-          }, {
-            name: "fairbanks",
-            city: "fairbanks"
-          }, {
-            name: "kenai peninsula",
-            city: "kenai"
-          }, {
-            name: "southeast alaska",
-            city: "juneau"
-          }],
+          cities: [
+            {
+              name: "anchorage / mat-su",
+              city: "anchorage",
+            },
+            {
+              name: "fairbanks",
+              city: "fairbanks",
+            },
+            {
+              name: "kenai peninsula",
+              city: "kenai",
+            },
+            {
+              name: "southeast alaska",
+              city: "juneau",
+            },
+          ],
         },
         {
           name: "Arizona",
           cities: [
             {
               name: "flagstaff / sedona",
-              city: "flagstaff"
+              city: "flagstaff",
             },
             {
               name: "mohave county",
-              city: "mohave"
+              city: "mohave",
             },
             {
               name: "phoenix",
-              city: "phoenix"
+              city: "phoenix",
             },
             {
               name: "prescott",
-              city: "prescott"
+              city: "prescott",
             },
             {
               name: "show low",
-              city: "showlow"
+              city: "showlow",
             },
             {
               name: "sierra vista",
-              city: "sierravista"
+              city: "sierravista",
             },
             {
               name: "tucson",
-              city: "tucson"
+              city: "tucson",
             },
             {
               name: "yuma",
-              city: "yuma"
-            }
+              city: "yuma",
+            },
           ],
         },
         {
@@ -107,25 +115,24 @@ export default class App extends React.Component {
           cities: [
             {
               name: "fayetteville",
-              city: "fayar"
+              city: "fayar",
             },
             {
               name: "fort smith",
-              city: "fortsmith"
+              city: "fortsmith",
             },
             {
               name: "jonesboro",
-              city: "jonesboro"
+              city: "jonesboro",
             },
             {
               name: "little rock",
-              city: "littlerock"
+              city: "littlerock",
             },
             {
               name: "texarkana",
-              city: "texarkana"
+              city: "texarkana",
             },
-
           ],
         },
         {
@@ -133,116 +140,116 @@ export default class App extends React.Component {
           cities: [
             {
               name: "bakersfield",
-              city: "bakersfield"
+              city: "bakersfield",
             },
             {
               name: "chico",
-              city: "chico"
+              city: "chico",
             },
             {
               name: "fresno / madera",
-              city: "fresno"
+              city: "fresno",
             },
             {
               name: "gold country",
-              city: "goldcountry"
+              city: "goldcountry",
             },
             {
               name: "hanford-corcoran",
-              city: "hanford"
+              city: "hanford",
             },
             {
               name: "humboldt county",
-              city: "humboldt"
+              city: "humboldt",
             },
             {
               name: "imperial county",
-              city: "imperial"
+              city: "imperial",
             },
             {
               name: "inland empire",
-              city: "inlandempire"
+              city: "inlandempire",
             },
             {
               name: "los angeles",
-              city: "losangeles"
+              city: "losangeles",
             },
             {
               name: "mendocino county",
-              city: "mendocino"
+              city: "mendocino",
             },
             {
               name: "merced",
-              city: "merced"
+              city: "merced",
             },
             {
               name: "modesto",
-              city: "modesto"
+              city: "modesto",
             },
             {
               name: "monterey bay",
-              city: "monterey"
+              city: "monterey",
             },
             {
               name: "orange county",
-              city: "orangecounty"
+              city: "orangecounty",
             },
             {
               name: "palm springs",
-              city: "palmsprings"
+              city: "palmsprings",
             },
             {
               name: "redding",
-              city: "redding"
+              city: "redding",
             },
             {
               name: "sacramento",
-              city: "sacramento"
+              city: "sacramento",
             },
             {
               name: "san diego",
-              city: "sandiego"
+              city: "sandiego",
             },
             {
               name: "san francisco bay area",
-              city: "sfbay"
+              city: "sfbay",
             },
             {
               name: "san luis obispo",
-              city: "slo"
+              city: "slo",
             },
             {
               name: "santa barbara",
-              city: "santabarbara"
+              city: "santabarbara",
             },
             {
               name: "santa maria",
-              city: "santamaria"
+              city: "santamaria",
             },
             {
               name: "siskiyou county",
-              city: "siskiyou"
+              city: "siskiyou",
             },
             {
               name: "stockton",
-              city: "stockton"
+              city: "stockton",
             },
             {
               name: "susanville",
-              city: "susanville"
+              city: "susanville",
             },
             {
               name: "ventura county",
-              city: "ventura"
+              city: "ventura",
             },
             {
               name: "visalia-tulare",
-              city: "visalia"
+              city: "visalia",
             },
             {
               name: "yuba-sutter",
-              city: "yubasutter"
-            }
+              city: "yubasutter",
+            },
           ],
         },
         {
@@ -250,36 +257,36 @@ export default class App extends React.Component {
           cities: [
             {
               name: "boulder",
-              city: "boulder"
+              city: "boulder",
             },
             {
               name: "colorado springs",
-              city: "cosprings"
+              city: "cosprings",
             },
             {
               name: "denver",
-              city: "denver"
+              city: "denver",
             },
             {
               name: "eastern CO",
-              city: "eastco"
+              city: "eastco",
             },
             {
               name: "fort collins / north CO",
-              city: "fortcollins"
+              city: "fortcollins",
             },
             {
               name: "high rockies",
-              city: "rockies"
+              city: "rockies",
             },
             {
               name: "pueblo",
-              city: "pueblo"
+              city: "pueblo",
             },
             {
               name: "western slope",
-              city: "westslope"
-            }
+              city: "westslope",
+            },
           ],
         },
         {
@@ -287,20 +294,20 @@ export default class App extends React.Component {
           cities: [
             {
               name: "eastern CT",
-              city: "newlondon"
+              city: "newlondon",
             },
             {
               name: "hartford",
-              city: "hartford"
+              city: "hartford",
             },
             {
               name: "new haven",
-              city: "newhaven"
+              city: "newhaven",
             },
             {
               name: "northwest CT",
-              city: "nwct"
-            }
+              city: "nwct",
+            },
           ],
         },
         {
@@ -308,8 +315,8 @@ export default class App extends React.Component {
           cities: [
             {
               name: "delaware",
-              city: "delaware"
-            }
+              city: "delaware",
+            },
           ],
         },
         {
@@ -317,8 +324,8 @@ export default class App extends React.Component {
           cities: [
             {
               name: "washington",
-              city: "washington"
-            }
+              city: "washington",
+            },
           ],
         },
         {
@@ -326,96 +333,96 @@ export default class App extends React.Component {
           cities: [
             {
               name: "broward county",
-              city: "miami"
+              city: "miami",
             },
             {
               name: "daytona beach",
-              city: "daytona"
+              city: "daytona",
             },
             {
               name: "florida keys",
-              city: "keys"
+              city: "keys",
             },
             {
               name: "fort lauderdale",
-              city: "miami"
+              city: "miami",
             },
             {
               name: "ft myers / SW florida",
-              city: "fortmyers"
+              city: "fortmyers",
             },
             {
               name: "gainesville",
-              city: "gainesville"
+              city: "gainesville",
             },
             {
               name: "heartland florida",
-              city: "cfl"
+              city: "cfl",
             },
             {
               name: "jacksonville",
-              city: "jacksonville"
+              city: "jacksonville",
             },
             {
               name: "lakeland",
-              city: "lakeland"
+              city: "lakeland",
             },
             {
               name: "miami / dade",
-              city: "miami"
+              city: "miami",
             },
             {
               name: "north central FL",
-              city: "lakecity"
+              city: "lakecity",
             },
             {
               name: "ocala",
-              city: "ocala"
+              city: "ocala",
             },
             {
               name: "okaloosa / walton",
-              city: "okaloosa"
+              city: "okaloosa",
             },
             {
               name: "orlando",
-              city: "orlando"
+              city: "orlando",
             },
             {
               name: "panama city",
-              city: "panamacity"
+              city: "panamacity",
             },
             {
               name: "pensacola",
-              city: "pensacola"
+              city: "pensacola",
             },
             {
               name: "sarasota-bradenton",
-              city: "sarasota"
+              city: "sarasota",
             },
             {
               name: "space coast",
-              city: "spacecoast"
+              city: "spacecoast",
             },
             {
               name: "st augustine",
-              city: "staugustine"
+              city: "staugustine",
             },
             {
               name: "tallahassee",
-              city: "tallahassee"
+              city: "tallahassee",
             },
             {
               name: "tampa bay area",
-              city: "tampa"
+              city: "tampa",
             },
             {
               name: "treasure coast",
-              city: "treasure"
+              city: "treasure",
             },
             {
               name: "palm beach county",
-              city: "miami"
-            }
+              city: "miami",
+            },
           ],
         },
         {
@@ -423,1515 +430,1515 @@ export default class App extends React.Component {
           cities: [
             {
               name: "albany",
-              city: "albanyga"
+              city: "albanyga",
             },
             {
               name: "athens",
-              city: "athensga"
+              city: "athensga",
             },
             {
               name: "atlanta",
-              city: "atlanta"
+              city: "atlanta",
             },
             {
               name: "augusta",
-              city: "augusta"
+              city: "augusta",
             },
             {
               name: "brunswick",
-              city: "brunswick"
+              city: "brunswick",
             },
             {
               name: "columbus",
-              city: "columbusga"
+              city: "columbusga",
             },
             {
               name: "macon / warner robins",
-              city: "macon"
+              city: "macon",
             },
             {
               name: "northwest GA",
-              city: "nwga"
+              city: "nwga",
             },
             {
               name: "savannah / hinesville",
-              city: "savannah"
+              city: "savannah",
             },
             {
               name: "statesboro",
-              city: "statesboro"
+              city: "statesboro",
             },
             {
               name: "valdosta",
-              city: "valdosta"
+              city: "valdosta",
             },
-          ]
+          ],
         },
         {
           name: "Hawaii",
           cities: [
             {
               name: "hawaii",
-              city: "honolulu"
+              city: "honolulu",
             },
-          ]
+          ],
         },
         {
           name: "Idaho",
           cities: [
             {
               name: "boise",
-              city: "boise"
+              city: "boise",
             },
             {
               name: "east idaho",
-              city: "eastidaho"
+              city: "eastidaho",
             },
             {
               name: "lewiston / clarkston",
-              city: "lewiston"
+              city: "lewiston",
             },
             {
               name: "twin falls",
-              city: "twinfalls"
+              city: "twinfalls",
             },
-          ]
+          ],
         },
         {
           name: "Illinois",
           cities: [
             {
               name: "bloomington-normal",
-              city: "bn"
+              city: "bn",
             },
             {
               name: "champaign urbana",
-              city: "chambana"
+              city: "chambana",
             },
             {
               name: "chicago",
-              city: "chicago"
+              city: "chicago",
             },
             {
               name: "decatur",
-              city: "decatur"
+              city: "decatur",
             },
             {
               name: "la salle co",
-              city: "lasalle"
+              city: "lasalle",
             },
             {
               name: "mattoon-charleston",
-              city: "mattoon"
+              city: "mattoon",
             },
             {
               name: "peoria",
-              city: "peoria"
+              city: "peoria",
             },
             {
               name: "rockford",
-              city: "rockford"
+              city: "rockford",
             },
             {
               name: "southern illinois",
-              city: "carbondale"
+              city: "carbondale",
             },
             {
               name: "springfield",
-              city: "springfieldil"
+              city: "springfieldil",
             },
             {
               name: "western IL",
-              city: "quincy"
+              city: "quincy",
             },
-          ]
+          ],
         },
         {
           name: "Indiana",
           cities: [
             {
               name: "bloomington",
-              city: "bloomington"
+              city: "bloomington",
             },
             {
               name: "evansville",
-              city: "evansville"
+              city: "evansville",
             },
             {
               name: "fort wayne",
-              city: "fortwayne"
+              city: "fortwayne",
             },
             {
               name: "indianapolis",
-              city: "indianapolis"
+              city: "indianapolis",
             },
             {
               name: "kokomo",
-              city: "kokomo"
+              city: "kokomo",
             },
             {
               name: "lafayette / west lafayette",
-              city: "tippecanoe"
+              city: "tippecanoe",
             },
             {
               name: "muncie / anderson",
-              city: "muncie"
+              city: "muncie",
             },
             {
               name: "richmond",
-              city: "richmondin"
+              city: "richmondin",
             },
             {
               name: "south bend / michiana",
-              city: "southbend"
+              city: "southbend",
             },
             {
               name: "terre haute",
-              city: "terrehaute"
-            }
-          ]
+              city: "terrehaute",
+            },
+          ],
         },
         {
           name: "Iowa",
           cities: [
             {
               name: "ames",
-              city: "ames"
+              city: "ames",
             },
             {
               name: "cedar rapids",
-              city: "cedarrapids"
+              city: "cedarrapids",
             },
             {
               name: "des moines",
-              city: "desmoines"
+              city: "desmoines",
             },
             {
               name: "dubuque",
-              city: "dubuque"
+              city: "dubuque",
             },
             {
               name: "fort dodge",
-              city: "fortdodge"
+              city: "fortdodge",
             },
             {
               name: "iowa city",
-              city: "iowacity"
+              city: "iowacity",
             },
             {
               name: "mason city",
-              city: "masoncity"
+              city: "masoncity",
             },
             {
               name: "quad cities",
-              city: "quadcities"
+              city: "quadcities",
             },
             {
               name: "sioux city",
-              city: "siouxcity"
+              city: "siouxcity",
             },
             {
               name: "southeast IA",
-              city: "ottumwa"
+              city: "ottumwa",
             },
             {
               name: "waterloo / cedar falls",
-              city: "waterloo"
+              city: "waterloo",
             },
-          ]
+          ],
         },
         {
           name: "Kansas",
           cities: [
             {
               name: "lawrence",
-              city: "lawrence"
+              city: "lawrence",
             },
             {
               name: "manhattan",
-              city: "ksu"
+              city: "ksu",
             },
             {
               name: "northwest KS",
-              city: "nwks"
+              city: "nwks",
             },
             {
               name: "salina",
-              city: "salina"
+              city: "salina",
             },
             {
               name: "southeast KS",
-              city: "seks"
+              city: "seks",
             },
             {
               name: "southwest KS",
-              city: "swks"
+              city: "swks",
             },
             {
               name: "topeka",
-              city: "topeka"
+              city: "topeka",
             },
             {
               name: "wichita",
-              city: "wichita"
+              city: "wichita",
             },
-          ]
+          ],
         },
         {
           name: "Kentucky",
           cities: [
             {
               name: "bowling green",
-              city: "bgky"
+              city: "bgky",
             },
             {
               name: "eastern kentucky",
-              city: "eastky"
+              city: "eastky",
             },
             {
               name: "lexington",
-              city: "lexington"
+              city: "lexington",
             },
             {
               name: "louisville",
-              city: "louisville"
+              city: "louisville",
             },
             {
               name: "owensboro",
-              city: "owensboro"
+              city: "owensboro",
             },
             {
               name: "western KY",
-              city: "westky"
+              city: "westky",
             },
-          ]
+          ],
         },
         {
           name: "Louisiana",
           cities: [
             {
               name: "baton rouge",
-              city: "batonrouge"
+              city: "batonrouge",
             },
             {
               name: "central louisiana",
-              city: "cenla"
+              city: "cenla",
             },
             {
               name: "houma",
-              city: "houma"
+              city: "houma",
             },
             {
               name: "lafayette",
-              city: "lafayette"
+              city: "lafayette",
             },
             {
               name: "lake charles",
-              city: "lakecharles"
+              city: "lakecharles",
             },
             {
               name: "monroe",
-              city: "monroe"
+              city: "monroe",
             },
             {
               name: "new orleans",
-              city: "neworleans"
+              city: "neworleans",
             },
             {
               name: "shreveport",
-              city: "shreveport"
+              city: "shreveport",
             },
-          ]
+          ],
         },
         {
           name: "Maine",
           cities: [
             {
               name: "maine",
-              city: "maine"
+              city: "maine",
             },
-          ]
+          ],
         },
         {
           name: "Maryland",
           cities: [
             {
               name: "annapolis",
-              city: "annapolis"
+              city: "annapolis",
             },
             {
               name: "baltimore",
-              city: "baltimore"
+              city: "baltimore",
             },
             {
               name: "eastern shore",
-              city: "easternshore"
+              city: "easternshore",
             },
             {
               name: "frederick",
-              city: "frederick"
+              city: "frederick",
             },
             {
               name: "southern maryland",
-              city: "smd"
+              city: "smd",
             },
             {
               name: "western maryland",
-              city: "westmd"
+              city: "westmd",
             },
-          ]
+          ],
         },
         {
           name: "Massachusetts",
           cities: [
             {
               name: "boston",
-              city: "boston"
+              city: "boston",
             },
             {
               name: "cape cod / islands",
-              city: "capecod"
+              city: "capecod",
             },
             {
               name: "south coast",
-              city: "southcoast"
+              city: "southcoast",
             },
             {
               name: "western massachusetts",
-              city: "westernmass"
+              city: "westernmass",
             },
             {
               name: "worcester / central MA",
-              city: "worcester"
+              city: "worcester",
             },
-          ]
+          ],
         },
         {
           name: "Michigan",
           cities: [
             {
               name: "ann arbor",
-              city: "annarbor"
+              city: "annarbor",
             },
             {
               name: "battle creek",
-              city: "battlecreek"
+              city: "battlecreek",
             },
             {
               name: "central michigan",
-              city: "centralmich"
+              city: "centralmich",
             },
             {
               name: "detroit metro",
-              city: "detroit"
+              city: "detroit",
             },
             {
               name: "flint",
-              city: "flint"
+              city: "flint",
             },
             {
               name: "grand rapids",
-              city: "grandrapids"
+              city: "grandrapids",
             },
             {
               name: "holland",
-              city: "holland"
+              city: "holland",
             },
             {
               name: "jackson",
-              city: "jxn"
+              city: "jxn",
             },
             {
               name: "kalamazoo",
-              city: "kalamazoo"
+              city: "kalamazoo",
             },
             {
               name: "lansing",
-              city: "lansing"
+              city: "lansing",
             },
             {
               name: "monroe",
-              city: "monroemi"
+              city: "monroemi",
             },
             {
               name: "muskegon",
-              city: "muskegon"
+              city: "muskegon",
             },
             {
               name: "northern michigan",
-              city: "nmi"
+              city: "nmi",
             },
             {
               name: "port huron",
-              city: "porthuron"
+              city: "porthuron",
             },
             {
               name: "saginaw-midland-baycity",
-              city: "saginaw"
+              city: "saginaw",
             },
             {
               name: "southwest michigan",
-              city: "swmi"
+              city: "swmi",
             },
             {
               name: "the thumb",
-              city: "thumb"
+              city: "thumb",
             },
             {
               name: "upper peninsula",
-              city: "up"
+              city: "up",
             },
-          ]
+          ],
         },
         {
           name: "Minnesota",
           cities: [
             {
               name: "bemidji",
-              city: "bemidji"
+              city: "bemidji",
             },
             {
               name: "brainerd",
-              city: "brainerd"
+              city: "brainerd",
             },
             {
               name: "duluth / superior",
-              city: "duluth"
+              city: "duluth",
             },
             {
               name: "mankato",
-              city: "mankato"
+              city: "mankato",
             },
             {
               name: "minneapolis / st paul",
-              city: "minneapolis"
+              city: "minneapolis",
             },
             {
               name: "rochester",
-              city: "rmn"
+              city: "rmn",
             },
             {
               name: "southwest MN",
-              city: "marshall"
+              city: "marshall",
             },
             {
               name: "st cloud",
-              city: "stcloud"
+              city: "stcloud",
             },
-          ]
+          ],
         },
         {
           name: "Mississippi",
           cities: [
             {
               name: "gulfport / biloxi",
-              city: "gulfport"
+              city: "gulfport",
             },
             {
               name: "hattiesburg",
-              city: "hattiesburg"
+              city: "hattiesburg",
             },
             {
               name: "jackson",
-              city: "jackson"
+              city: "jackson",
             },
             {
               name: "meridian",
-              city: "meridian"
+              city: "meridian",
             },
             {
               name: "north mississippi",
-              city: "northmiss"
+              city: "northmiss",
             },
             {
               name: "southwest MS",
-              city: "natchez"
+              city: "natchez",
             },
-          ]
+          ],
         },
         {
           name: "Missouri",
           cities: [
             {
               name: "columbia / jeff city",
-              city: "columbiamo"
+              city: "columbiamo",
             },
             {
               name: "joplin",
-              city: "joplin"
+              city: "joplin",
             },
             {
               name: "kansas city",
-              city: "kansascity"
+              city: "kansascity",
             },
             {
               name: "kirksville",
-              city: "kirksville"
+              city: "kirksville",
             },
             {
               name: "lake of the ozarks",
-              city: "loz"
+              city: "loz",
             },
             {
               name: "southeast missouri",
-              city: "semo"
+              city: "semo",
             },
             {
               name: "springfield",
-              city: "springfield"
+              city: "springfield",
             },
             {
               name: "st joseph",
-              city: "stjoseph"
+              city: "stjoseph",
             },
             {
               name: "st louis",
-              city: "stlouis"
+              city: "stlouis",
             },
-          ]
+          ],
         },
         {
           name: "Montana",
           cities: [
             {
               name: "billings",
-              city: "billings"
+              city: "billings",
             },
             {
               name: "bozeman",
-              city: "bozeman"
+              city: "bozeman",
             },
             {
               name: "butte",
-              city: "butte"
+              city: "butte",
             },
             {
               name: "great falls",
-              city: "greatfalls"
+              city: "greatfalls",
             },
             {
               name: "helena",
-              city: "helena"
+              city: "helena",
             },
             {
               name: "kalispell",
-              city: "kalispell"
+              city: "kalispell",
             },
             {
               name: "missoula",
-              city: "missoula"
+              city: "missoula",
             },
             {
               name: "eastern montana",
-              city: "montana"
+              city: "montana",
             },
-          ]
+          ],
         },
         {
           name: "Nebraska",
           cities: [
             {
               name: "grand island",
-              city: "grandisland"
+              city: "grandisland",
             },
             {
               name: "lincoln",
-              city: "lincoln"
+              city: "lincoln",
             },
             {
               name: "north platte",
-              city: "northplatte"
+              city: "northplatte",
             },
             {
               name: "omaha / council bluffs",
-              city: "omaha"
+              city: "omaha",
             },
             {
               name: "scottsbluff / panhandle",
-              city: "scottsbluff"
+              city: "scottsbluff",
             },
-          ]
+          ],
         },
         {
           name: "Nevada",
           cities: [
             {
               name: "elko",
-              city: "elko"
+              city: "elko",
             },
             {
               name: "las vegas",
-              city: "lasvegas"
+              city: "lasvegas",
             },
             {
               name: "reno / tahoe",
-              city: "reno"
-            }
-          ]
+              city: "reno",
+            },
+          ],
         },
         {
           name: "New Hampshire",
           cities: [
             {
               name: "new hampshire",
-              city: "nh"
+              city: "nh",
             },
-          ]
+          ],
         },
         {
           name: "New Jersey",
           cities: [
             {
               name: "central NJ",
-              city: "cnj"
+              city: "cnj",
             },
             {
               name: "jersey shore",
-              city: "jerseyshore"
+              city: "jerseyshore",
             },
             {
               name: "north jersey",
-              city: "newjersey"
+              city: "newjersey",
             },
             {
               name: "south jersey",
-              city: "southjersey"
-            }
-          ]
+              city: "southjersey",
+            },
+          ],
         },
         {
           name: "New Mexico",
           cities: [
             {
               name: "albuquerque",
-              city: "albuquerque"
+              city: "albuquerque",
             },
             {
               name: "clovis / portales",
-              city: "clovis"
+              city: "clovis",
             },
             {
               name: "farmington",
-              city: "farmington"
+              city: "farmington",
             },
             {
               name: "las cruces",
-              city: "lascruces"
+              city: "lascruces",
             },
             {
               name: "roswell / carlsbad",
-              city: "roswell"
+              city: "roswell",
             },
             {
               name: "santa fe / taos",
-              city: "santafe"
+              city: "santafe",
             },
-          ]
+          ],
         },
         {
           name: "New York",
           cities: [
             {
               name: "albany",
-              city: "albany"
+              city: "albany",
             },
             {
               name: "binghamton",
-              city: "binghamton"
+              city: "binghamton",
             },
             {
               name: "buffalo",
-              city: "buffalo"
+              city: "buffalo",
             },
             {
               name: "catskills",
-              city: "catskills"
+              city: "catskills",
             },
             {
               name: "chautauqua",
-              city: "chautauqua"
+              city: "chautauqua",
             },
             {
               name: "elmira-corning",
-              city: "elmira"
+              city: "elmira",
             },
             {
               name: "finger lakes",
-              city: "fingerlakes"
+              city: "fingerlakes",
             },
             {
               name: "glens falls",
-              city: "glensfalls"
+              city: "glensfalls",
             },
             {
               name: "hudson valley",
-              city: "hudsonvalley"
+              city: "hudsonvalley",
             },
             {
               name: "ithaca",
-              city: "ithaca"
+              city: "ithaca",
             },
             {
               name: "long island",
-              city: "longisland"
+              city: "longisland",
             },
             {
               name: "oneonta",
-              city: "oneonta"
+              city: "oneonta",
             },
             {
               name: "plattsburgh-adirondacks",
-              city: "plattsburgh"
+              city: "plattsburgh",
             },
             {
               name: "potsdam-canton-massena",
-              city: "potsdam"
+              city: "potsdam",
             },
             {
               name: "rochester",
-              city: "rochester"
+              city: "rochester",
             },
             {
               name: "syracuse",
-              city: "syracuse"
+              city: "syracuse",
             },
             {
               name: "twin tiers NY/PA",
-              city: "twintiers"
+              city: "twintiers",
             },
             {
               name: "utica-rome-oneida",
-              city: "utica"
+              city: "utica",
             },
             {
               name: "watertown",
-              city: "watertown"
+              city: "watertown",
             },
-          ]
+          ],
         },
         {
           name: "North Carolina",
           cities: [
             {
               name: "asheville",
-              city: "asheville"
+              city: "asheville",
             },
             {
               name: "boone",
-              city: "boone"
+              city: "boone",
             },
             {
               name: "charlotte",
-              city: "charlotte"
+              city: "charlotte",
             },
             {
               name: "eastern NC",
-              city: "eastnc"
+              city: "eastnc",
             },
             {
               name: "fayetteville",
-              city: "fayetteville"
+              city: "fayetteville",
             },
             {
               name: "greensboro",
-              city: "greensboro"
+              city: "greensboro",
             },
             {
               name: "hickory / lenoir",
-              city: "hickory"
+              city: "hickory",
             },
             {
               name: "jacksonville",
-              city: "onslow"
+              city: "onslow",
             },
             {
               name: "outer banks",
-              city: "outerbanks"
+              city: "outerbanks",
             },
             {
               name: "raleigh / durham / CH",
-              city: "raleigh"
+              city: "raleigh",
             },
             {
               name: "wilmington",
-              city: "wilmington"
+              city: "wilmington",
             },
             {
               name: "winston-salem",
-              city: "winstonsalem"
+              city: "winstonsalem",
             },
-          ]
+          ],
         },
         {
           name: "North Dakota",
           cities: [
             {
               name: "bismarck",
-              city: "bismarck"
+              city: "bismarck",
             },
             {
               name: "fargo / moorhead",
-              city: "fargo"
+              city: "fargo",
             },
             {
               name: "grand forks",
-              city: "grandforks"
+              city: "grandforks",
             },
             {
               name: "north dakota",
-              city: "nd"
+              city: "nd",
             },
-          ]
+          ],
         },
         {
           name: "Ohio",
           cities: [
             {
               name: "akron / canton",
-              city: "akroncanton"
+              city: "akroncanton",
             },
             {
               name: "ashtabula",
-              city: "ashtabula"
+              city: "ashtabula",
             },
             {
               name: "athens",
-              city: "athens"
+              city: "athens",
             },
             {
               name: "chillicothe",
-              city: "chillicothe"
+              city: "chillicothe",
             },
             {
               name: "cincinnati",
-              city: "cincinnati"
+              city: "cincinnati",
             },
             {
               name: "cleveland",
-              city: "cleveland"
+              city: "cleveland",
             },
             {
               name: "columbus",
-              city: "columbus"
+              city: "columbus",
             },
             {
               name: "dayton / springfield",
-              city: "dayton"
+              city: "dayton",
             },
             {
               name: "lima / findlay",
-              city: "limaohio"
+              city: "limaohio",
             },
             {
               name: "mansfield",
-              city: "mansfield"
+              city: "mansfield",
             },
             {
               name: "sandusky",
-              city: "sandusky"
+              city: "sandusky",
             },
             {
               name: "toledo",
-              city: "toledo"
+              city: "toledo",
             },
             {
               name: "tuscarawas co",
-              city: "tuscarawas"
+              city: "tuscarawas",
             },
             {
               name: "youngstown",
-              city: "youngstown"
+              city: "youngstown",
             },
             {
               name: "zanesville / cambridge",
-              city: "zanesville"
-            }
-          ]
+              city: "zanesville",
+            },
+          ],
         },
         {
           name: "Oklahoma",
           cities: [
             {
               name: "lawton",
-              city: "lawton"
+              city: "lawton",
             },
             {
               name: "northwest OK",
-              city: "enid"
+              city: "enid",
             },
             {
               name: "oklahoma city",
-              city: "oklahomacity"
+              city: "oklahomacity",
             },
             {
               name: "stillwater",
-              city: "stillwater"
+              city: "stillwater",
             },
             {
               name: "tulsa",
-              city: "tulsa"
+              city: "tulsa",
             },
-          ]
+          ],
         },
         {
           name: "Oregon",
           cities: [
             {
               name: "bend",
-              city: "bend"
+              city: "bend",
             },
             {
               name: "corvallis/albany",
-              city: "corvallis"
+              city: "corvallis",
             },
             {
               name: "east oregon",
-              city: "eastoregon"
+              city: "eastoregon",
             },
             {
               name: "eugene",
-              city: "eugene"
+              city: "eugene",
             },
             {
               name: "klamath falls",
-              city: "klamath"
+              city: "klamath",
             },
             {
               name: "medford-ashland",
-              city: "medford"
+              city: "medford",
             },
             {
               name: "oregon coast",
-              city: "oregoncoast"
+              city: "oregoncoast",
             },
             {
               name: "portland",
-              city: "portland"
+              city: "portland",
             },
             {
               name: "roseburg",
-              city: "roseburg"
+              city: "roseburg",
             },
             {
               name: "salem",
-              city: "salem"
+              city: "salem",
             },
-          ]
+          ],
         },
         {
           name: "Pennsylvania",
           cities: [
             {
               name: "altoona-johnstown",
-              city: "altoona"
+              city: "altoona",
             },
             {
               name: "cumberland valley",
-              city: "chambersburg"
+              city: "chambersburg",
             },
             {
               name: "erie",
-              city: "erie"
+              city: "erie",
             },
             {
               name: "harrisburg",
-              city: "harrisburg"
+              city: "harrisburg",
             },
             {
               name: "lancaster",
-              city: "lancaster"
+              city: "lancaster",
             },
             {
               name: "lehigh valley",
-              city: "allentown"
+              city: "allentown",
             },
             {
               name: "meadville",
-              city: "meadville"
+              city: "meadville",
             },
             {
               name: "philadelphia",
-              city: "philadelphia"
+              city: "philadelphia",
             },
             {
               name: "pittsburgh",
-              city: "pittsburgh"
+              city: "pittsburgh",
             },
             {
               name: "poconos",
-              city: "poconos"
+              city: "poconos",
             },
             {
               name: "reading",
-              city: "reading"
+              city: "reading",
             },
             {
               name: "scranton / wilkes-barre",
-              city: "scranton"
+              city: "scranton",
             },
             {
               name: "state college",
-              city: "pennstate"
+              city: "pennstate",
             },
             {
               name: "williamsport",
-              city: "williamsport"
+              city: "williamsport",
             },
             {
               name: "york",
-              city: "york"
+              city: "york",
             },
-          ]
+          ],
         },
         {
           name: "Rhode Island",
           cities: [
             {
               name: "rhode island",
-              city: "providence"
+              city: "providence",
             },
-          ]
+          ],
         },
         {
           name: "South Carolina",
           cities: [
             {
               name: "charleston",
-              city: "charleston"
+              city: "charleston",
             },
             {
               name: "columbia",
-              city: "columbia"
+              city: "columbia",
             },
             {
               name: "florence",
-              city: "florencesc"
+              city: "florencesc",
             },
             {
               name: "greenville / upstate",
-              city: "greenville"
+              city: "greenville",
             },
             {
               name: "hilton head",
-              city: "hiltonhead"
+              city: "hiltonhead",
             },
             {
               name: "myrtle beach",
-              city: "myrtlebeach"
+              city: "myrtlebeach",
             },
-          ]
+          ],
         },
         {
           name: "South Dakota",
           cities: [
             {
               name: "northeast SD",
-              city: "nesd"
+              city: "nesd",
             },
             {
               name: "pierre / central SD",
-              city: "csd"
+              city: "csd",
             },
             {
               name: "rapid city / west SD",
-              city: "rapidcity"
+              city: "rapidcity",
             },
             {
               name: "sioux falls / SE SD",
-              city: "siouxfalls"
+              city: "siouxfalls",
             },
             {
               name: "south dakota",
-              city: "sd"
+              city: "sd",
             },
-          ]
+          ],
         },
         {
           name: "Tennessee",
           cities: [
             {
               name: "chattanooga",
-              city: "chattanooga"
+              city: "chattanooga",
             },
             {
               name: "clarksville",
-              city: "clarksville"
+              city: "clarksville",
             },
             {
               name: "jackson",
-              city: "jacksontn"
+              city: "jacksontn",
             },
             {
               name: "knoxville",
-              city: "knoxville"
+              city: "knoxville",
             },
             {
               name: "memphis",
-              city: "memphis"
+              city: "memphis",
             },
             {
               name: "nashville",
-              city: "nashville"
+              city: "nashville",
             },
             {
               name: "tri-cities",
-              city: "tricities"
+              city: "tricities",
             },
-          ]
+          ],
         },
         {
           name: "Texas",
           cities: [
             {
               name: "abilene",
-              city: "abilene"
+              city: "abilene",
             },
             {
               name: "amarillo",
-              city: "amarillo"
+              city: "amarillo",
             },
             {
               name: "austin",
-              city: "austin"
+              city: "austin",
             },
             {
               name: "beaumont / port arthur",
-              city: "beaumont"
+              city: "beaumont",
             },
             {
               name: "brownsville",
-              city: "brownsville"
+              city: "brownsville",
             },
             {
               name: "college station",
-              city: "collegestation"
+              city: "collegestation",
             },
             {
               name: "corpus christi",
-              city: "corpuschristi"
+              city: "corpuschristi",
             },
             {
               name: "dallas / fort worth",
-              city: "dallas"
+              city: "dallas",
             },
             {
               name: "deep east texas",
-              city: "nacogdoches"
+              city: "nacogdoches",
             },
             {
               name: "del rio / eagle pass",
-              city: "delrio"
+              city: "delrio",
             },
             {
               name: "el paso",
-              city: "elpaso"
+              city: "elpaso",
             },
             {
               name: "galveston",
-              city: "galveston"
+              city: "galveston",
             },
             {
               name: "houston",
-              city: "houston"
+              city: "houston",
             },
             {
               name: "killeen / temple / ft hood",
-              city: "killeen"
+              city: "killeen",
             },
             {
               name: "laredo",
-              city: "laredo"
+              city: "laredo",
             },
             {
               name: "lubbock",
-              city: "lubbock"
+              city: "lubbock",
             },
             {
               name: "mcallen / edinburg",
-              city: "mcallen"
+              city: "mcallen",
             },
             {
               name: "odessa / midland",
-              city: "odessa"
+              city: "odessa",
             },
             {
               name: "san angelo",
-              city: "sanangelo"
+              city: "sanangelo",
             },
             {
               name: "san antonio",
-              city: "san antonio"
+              city: "san antonio",
             },
             {
               name: "san marcos",
-              city: "sanmarcos"
+              city: "sanmarcos",
             },
             {
               name: "southwest TX",
-              city: "bigbend"
+              city: "bigbend",
             },
             {
               name: "texoma",
-              city: "texoma"
+              city: "texoma",
             },
             {
               name: "tyler / east TX",
-              city: "easttexas"
+              city: "easttexas",
             },
             {
               name: "victoria",
-              city: "victoriatx"
+              city: "victoriatx",
             },
             {
               name: "waco",
-              city: "waco"
+              city: "waco",
             },
             {
               name: "wichita falls",
-              city: "wichitafalls"
-            }
-          ]
+              city: "wichitafalls",
+            },
+          ],
         },
         {
           name: "Utah",
           cities: [
             {
               name: "logan",
-              city: "logan"
+              city: "logan",
             },
             {
               name: "ogden-clearfield",
-              city: "ogden"
+              city: "ogden",
             },
             {
               name: "provo / orem",
-              city: "provo"
+              city: "provo",
             },
             {
               name: "salt lake city",
-              city: "saltlakecity"
+              city: "saltlakecity",
             },
             {
               name: "st george",
-              city: "stgeorge"
+              city: "stgeorge",
             },
-          ]
+          ],
         },
         {
           name: "Vermont",
           cities: [
             {
               name: "vermont",
-              city: "burlington"
+              city: "burlington",
             },
-          ]
+          ],
         },
         {
           name: "Virginia",
           cities: [
             {
               name: "charlottesville",
-              city: "charlottesville"
+              city: "charlottesville",
             },
             {
               name: "danville",
-              city: "danville"
+              city: "danville",
             },
             {
               name: "fredericksburg",
-              city: "fredericksburg"
+              city: "fredericksburg",
             },
             {
               name: "hampton roads",
-              city: "norfolk"
+              city: "norfolk",
             },
             {
               name: "harrisonburg",
-              city: "harrisonburg"
+              city: "harrisonburg",
             },
             {
               name: "lynchburg",
-              city: "lynchburg"
+              city: "lynchburg",
             },
             {
               name: "new river valley",
-              city: "blacksburg"
+              city: "blacksburg",
             },
             {
               name: "richmond",
-              city: "richmond"
+              city: "richmond",
             },
             {
               name: "roanoke",
-              city: "roanoke"
+              city: "roanoke",
             },
             {
               name: "southwest VA",
-              city: "swva"
+              city: "swva",
             },
             {
               name: "winchester",
-              city: "winchester"
-            }
-          ]
+              city: "winchester",
+            },
+          ],
         },
         {
           name: "Washington",
           cities: [
             {
               name: "bellingham",
-              city: "bellingham"
+              city: "bellingham",
             },
             {
               name: "kennewick-pasco-richland",
-              city: "kpr"
+              city: "kpr",
             },
             {
               name: "moses lake",
-              city: "moseslake"
+              city: "moseslake",
             },
             {
               name: "olympic peninsula",
-              city: "olympic"
+              city: "olympic",
             },
             {
               name: "pullman / moscow",
-              city: "pullman"
+              city: "pullman",
             },
             {
               name: "seattle-tacoma",
-              city: "seattle"
+              city: "seattle",
             },
             {
               name: "skagit / island / SJI",
-              city: "skagit"
+              city: "skagit",
             },
             {
               name: "spokane / coeur d'alene",
-              city: "spokane"
+              city: "spokane",
             },
             {
               name: "wenatchee",
-              city: "wenatchee"
+              city: "wenatchee",
             },
             {
               name: "yakima",
-              city: "yakima"
+              city: "yakima",
             },
-          ]
+          ],
         },
         {
           name: "West Virginia",
           cities: [
             {
               name: "charleston",
-              city: "charlestonwv"
+              city: "charlestonwv",
             },
             {
               name: "eastern panhandle",
-              city: "martinsburg"
+              city: "martinsburg",
             },
             {
               name: "huntington-ashland",
-              city: "huntington"
+              city: "huntington",
             },
             {
               name: "morgantown",
-              city: "morgantown"
+              city: "morgantown",
             },
             {
               name: "northern panhandle",
-              city: "wheeling"
+              city: "wheeling",
             },
             {
               name: "parkersburg-marietta",
-              city: "parkersburg"
+              city: "parkersburg",
             },
             {
               name: "southern WV",
-              city: "swv"
+              city: "swv",
             },
             {
               name: "west virginia (old)",
-              city: "wv"
+              city: "wv",
             },
-          ]
+          ],
         },
         {
           name: "Wisconsin",
           cities: [
             {
               name: "appleton-oshkosh-FDL",
-              city: "appleton"
+              city: "appleton",
             },
             {
               name: "eau claire",
-              city: "eauclaire"
+              city: "eauclaire",
             },
             {
               name: "green bay",
-              city: "greenbay"
+              city: "greenbay",
             },
             {
               name: "janesville",
-              city: "janesville"
+              city: "janesville",
             },
             {
               name: "kenosha-racine",
-              city: "racine"
+              city: "racine",
             },
             {
               name: "la crosse",
-              city: "lacrosse"
+              city: "lacrosse",
             },
             {
               name: "madison",
-              city: "madison"
+              city: "madison",
             },
             {
               name: "milwaukee",
-              city: "milwaukee"
+              city: "milwaukee",
             },
             {
               name: "northern WI",
-              city: "northernwi"
+              city: "northernwi",
             },
             {
               name: "sheboygan",
-              city: "sheboygan"
+              city: "sheboygan",
             },
             {
               name: "wausau",
-              city: "wausau"
+              city: "wausau",
             },
-          ]
+          ],
         },
         {
           name: "Wyoming",
           cities: [
             {
               name: "wyoming",
-              city: "wyoming"
+              city: "wyoming",
             },
-          ]
+          ],
         },
         {
           name: "Territories",
           cities: [
             {
               name: "guam-micronesia",
-              city: "micronesia"
+              city: "micronesia",
             },
             {
               name: "puerto rico",
-              city: "puertorico"
+              city: "puertorico",
             },
             {
               name: "U.S. virgin islands",
-              city: "virgin"
-            }
-          ]
-        }
+              city: "virgin",
+            },
+          ],
+        },
       ],
       categories: [
         {
@@ -1972,6 +1979,8 @@ export default class App extends React.Component {
       search: "",
       loading: false,
       message: null,
+      searchNearby: false,
+      startDate: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
     };
   }
 
@@ -1982,17 +1991,32 @@ export default class App extends React.Component {
     });
   };
 
+  toggleSearchNearBy = () => {
+    this.setState({
+      searchNearby: !this.state.searchNearby,
+    });
+  };
+
   handleStateChange = (event) => {
-    const autoSelectedCity = this.state.states.find(state => state.name === event.target.value);
+    const autoSelectedCity = this.state.states.find(
+      (state) => state.name === event.target.value
+    );
     this.setState({
       state: event.target.value,
-      city: autoSelectedCity.cities[0].city
+      city: autoSelectedCity.cities[0].city,
     });
+  };
 
+  handleDateChange = (date) => {
+    this.setState({
+      startDate: date,
+    });
   };
 
   getCitiesAsPerStateSelected = () => {
-    const view = this.state.states.filter(({ name }) => name === this.state.state)[0];
+    const view = this.state.states.filter(
+      ({ name }) => name === this.state.state
+    )[0];
     return (
       <select
         value={this.state.city}
@@ -2010,7 +2034,7 @@ export default class App extends React.Component {
   };
 
   getCraigslistData = () => {
-    const { city, search, category } = this.state;
+    const { city, search, category, searchNearby, startDate } = this.state;
     this.setState({
       loading: true,
     });
@@ -2020,12 +2044,19 @@ export default class App extends React.Component {
           city: city,
           search: search,
           category: category,
+          searchNearby: searchNearby,
         },
       })
       .then((response) => {
         const message = response.data.length === 0 ? "No Result Found" : null;
+        const endDate = new Date();
+        const result = response.data.filter((a) => {
+          const date = new Date(a.date);
+          return date >= startDate && date <= endDate;
+        });
+
         this.setState({
-          data: response.data,
+          data: result,
           loading: false,
           message: message,
         });
@@ -2083,7 +2114,7 @@ export default class App extends React.Component {
         a.click();
 
         document.body.removeChild(a);
-      } catch (e) { }
+      } catch (e) {}
     this.setState({
       data: [],
     });
@@ -2101,6 +2132,7 @@ export default class App extends React.Component {
       search,
       loading,
       message,
+      startDate,
     } = this.state;
 
     return (
@@ -2155,6 +2187,31 @@ export default class App extends React.Component {
         <br />
         <div className="form-inline">
           <div className="form-group">
+            <label className="mr-sm-2">Search Near by</label>
+            <input
+              className="form-control mr-sm-2"
+              name="searchNearby"
+              type="checkbox"
+              onChange={this.toggleSearchNearBy}
+            />
+          </div>
+        </div>
+        <br />
+        <div className="form-inline">
+          <div className="form-group">
+            <label className="mr-sm-2">Start Date</label>
+            <div>
+              <DatePicker
+                className="form-control"
+                selected={startDate}
+                onChange={this.handleDateChange}
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="form-inline">
+          <div className="form-group">
             <button
               className="btn btn-primary mr-sm-2"
               onClick={() => this.getCraigslistData()}
@@ -2186,6 +2243,7 @@ export default class App extends React.Component {
               <thead>
                 <tr>
                   <th>Index</th>
+                  <th>State</th>
                   <th>Job Links</th>
                 </tr>
               </thead>
@@ -2193,6 +2251,7 @@ export default class App extends React.Component {
                 {data.map((element, index) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
+                    <th>{state}</th>
                     <td>
                       <a href={element.url} target="_blank">
                         {element.url}
@@ -2203,8 +2262,8 @@ export default class App extends React.Component {
               </tbody>
             </table>
           ) : (
-              <span>{message}</span>
-            )}
+            <span>{message}</span>
+          )}
         </div>
       </div>
     );
